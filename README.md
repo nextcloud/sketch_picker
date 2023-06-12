@@ -1,0 +1,3 @@
+# Nextcloud Sketch picker
+
+This app adds a smart picker provider to ...

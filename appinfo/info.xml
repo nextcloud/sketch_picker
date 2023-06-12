@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<info>
+	<id>sketch_picker</id>
+	<name>Sketch picker</name>
+	<summary>Quickly draw and share sketches</summary>
+	<description><![CDATA[This app adds a smart picker provider to quickly draw sketches and insert them in your current context.]]></description>
+	<version>1.0.0</version>
+	<licence>agpl</licence>
+	<author>Julien Veyssier</author>
+	<namespace>SketchPicker</namespace>
+	<documentation>
+		<developer>https://github.com/julien-nc/sketch_picker</developer>
+	</documentation>
+	<category>integration</category>
+	<website>https://github.com/julien-nc/sketch_picker</website>
+	<bugs>https://github.com/julien-nc/sketch_picker/issues</bugs>
+	<screenshot>https://github.com/julien-nc/sketch_picker/raw/main/img/screenshot1.jpg</screenshot>
+	<screenshot>https://github.com/julien-nc/sketch_picker/raw/main/img/screenshot2.jpg</screenshot>
+	<screenshot>https://github.com/julien-nc/sketch_picker/raw/main/img/screenshot3.jpg</screenshot>
+	<screenshot>https://github.com/julien-nc/sketch_picker/raw/main/img/screenshot4.jpg</screenshot>
+	<dependencies>
+		<nextcloud min-version="26" max-version="28"/>
+	</dependencies>
+</info>

@@ -2,10 +2,8 @@
 	<div ref="editor" class="sketch_picker__image-editor" v-bind="themeDataAttr" />
 </template>
 <script>
-import { basename, dirname, extname, join } from 'path'
 import { emit } from '@nextcloud/event-bus'
-import { showError, showSuccess } from '@nextcloud/dialogs'
-import axios from '@nextcloud/axios'
+import { showError } from '@nextcloud/dialogs'
 
 // import translations from '../models/editorTranslations.js'
 
@@ -30,8 +28,8 @@ export default {
 	computed: {
 		config() {
 			return {
-				// source: this.src,
-				source: new Image(500, 500),
+				source: this.src,
+				// source: new Image(500, 500),
 
 				defaultSavedImageName: this.defaultSavedImageName,
 				defaultSavedImageType: this.defaultSavedImageType,
@@ -84,10 +82,12 @@ export default {
 		},
 
 		defaultSavedImageName() {
-			return basename(this.src, extname(this.src))
+			// return basename(this.src, extname(this.src))
+			return 'img'
 		},
 		defaultSavedImageType() {
-			return extname(this.src).slice(1) || 'jpeg'
+			// return extname(this.src).slice(1) || 'jpeg'
+			return 'jpeg'
 		},
 
 		hasHighContrastEnabled() {
@@ -444,6 +444,10 @@ export default {
 		height: 44px;
 		padding: 6px 16px;
 		border-radius: var(--border-radius-pill);
+	}
+
+	.SfxLabel-text {
+		overflow: visible;
 	}
 }
 

@@ -4,7 +4,7 @@
 			{{ t('sketch_picker', 'Draw a sketch') }}
 		</h2>
 		<ImageEditor
-			src="sketch.png"
+			:src="initialImageUrl"
 			@submit="onEditorSubmit" />
 	</div>
 </template>
@@ -13,7 +13,7 @@
 import ImageEditor from '../components/ImageEditor.vue'
 
 import axios from '@nextcloud/axios'
-import { generateOcsUrl, generateUrl } from '@nextcloud/router'
+import { generateOcsUrl, generateUrl, imagePath } from '@nextcloud/router'
 import { showError } from '@nextcloud/dialogs'
 
 export default {
@@ -36,6 +36,7 @@ export default {
 
 	data() {
 		return {
+			initialImageUrl: imagePath('sketch_picker', 'white.png'),
 		}
 	},
 

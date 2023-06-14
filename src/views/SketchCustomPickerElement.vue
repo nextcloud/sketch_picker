@@ -54,14 +54,9 @@ export default {
 
 	methods: {
 		async onEditorSubmit({ fileName, mimeType, blob }) {
-			console.debug('aaaaaaaaa', fileName)
-			console.debug('aaaaaaaaa', mimeType)
-			console.debug('aaaaaaaaa', blob)
-
 			try {
 				this.loading = true
 				const content = await this.readBlob(blob)
-				console.debug('aaaaaaaaa content', content)
 				const params = {
 					base64Content: content,
 					mimeType,

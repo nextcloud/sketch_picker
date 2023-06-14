@@ -40,18 +40,37 @@ export default {
 				observePluginContainerSize: true,
 
 				// Default tab and tool
-				defaultTabId: TABS.ADJUST,
-				defaultToolId: TOOLS.CROP,
+				defaultTabId: TABS.ANNOTATE,
+				defaultToolId: TOOLS.PEN,
+
+				// default draw style
+				annotationsCommon: {
+					fill: '#00000000',
+					stroke: '#000000',
+					strokeWidth: 2,
+					shadowOffsetX: 0,
+					shadowOffsetY: 0,
+					shadowBlur: 0,
+					shadowColor: '#000000',
+					shadowOpacity: 1,
+					opacity: 1,
+				},
+
+				Pen: {
+					strokeWidth: 2,
+				},
 
 				// Displayed tabs, disabling watermark
 				tabsIds: Object.values(TABS)
 					.filter(tab => tab !== TABS.WATERMARK)
 					.sort((a, b) => a.localeCompare(b)),
 
-				// onBeforeSave: this.onBeforeSave,
-				onClose: this.onClose,
+				// use onBeforeSave to avoid showing the name/format modal
+				onBeforeSave: this.onBeforeSave,
+				// onSave is required and still triggered even if onBeforeSave returns false
+				onSave: () => {},
+				// onClose: this.onClose,
 				// onModify: this.onModify,
-				onSave: this.onSave,
 
 				// Translations
 				// translations,
@@ -138,6 +157,17 @@ export default {
 			}
 			window.removeEventListener('keydown', this.handleKeydown, true)
 			this.$emit('close')
+		},
+
+		onBeforeSave(params) {
+			const currentImgData = this.imageEditor.getCurrentImgData()
+			this.onSave({
+				fullName: params.name,
+				quality: params.quality,
+				mimeType: 'image/jpeg',
+				imageCanvas: currentImgData.imageData.imageCanvas,
+			})
+			return false
 		},
 
 		/**

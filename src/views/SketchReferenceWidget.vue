@@ -27,10 +27,14 @@
 					:size="44"
 					:title="t('sketch_picker', 'Loading sketch')" />
 			</div>
-			<img v-show="isLoaded"
-				class="image"
-				:src="richObject.url"
-				@load="isLoaded = true">
+			<a v-show="isLoaded"
+				:href="richObject.url"
+				target="_blank">
+				<img
+					class="image"
+					:src="richObject.url"
+					@load="isLoaded = true">
+			</a>
 		</div>
 	</div>
 </template>

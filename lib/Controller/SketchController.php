@@ -14,6 +14,7 @@ namespace OCA\SketchPicker\Controller;
 use Exception;
 use OCA\SketchPicker\Service\SketchService;
 use OCP\AppFramework\Http;
+use OCP\AppFramework\Http\Attribute\NoAdminRequired;
 use OCP\AppFramework\Http\DataResponse;
 use OCP\AppFramework\OCSController;
 use OCP\IRequest;
@@ -31,12 +32,11 @@ class SketchController extends OCSController {
 	}
 
 	/**
-	 * @NoAdminRequired
-	 *
 	 * @param string $base64Content
 	 * @param string $mimeType
 	 * @return DataResponse
 	 */
+	#[NoAdminRequired]
 	public function addSketch(string $base64Content, string $mimeType): DataResponse {
 		try {
 			$binaryContent = base64_decode(str_replace('data:' . $mimeType . ';base64,', '', $base64Content));

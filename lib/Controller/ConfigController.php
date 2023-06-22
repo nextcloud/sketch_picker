@@ -11,6 +11,7 @@
 
 namespace OCA\SketchPicker\Controller;
 
+use OCP\AppFramework\Http\Attribute\NoAdminRequired;
 use OCP\IConfig;
 use OCP\IRequest;
 use OCP\AppFramework\Http\DataResponse;
@@ -31,12 +32,11 @@ class ConfigController extends Controller {
 	}
 
 	/**
-	 * @NoAdminRequired
-	 *
 	 * @param array $values
 	 * @return DataResponse
 	 * @throws PreConditionNotMetException
 	 */
+	#[NoAdminRequired]
 	public function setConfig(array $values): DataResponse {
 		foreach ($values as $key => $value) {
 			$this->config->setUserValue($this->userId, Application::APP_ID, $key, $value);

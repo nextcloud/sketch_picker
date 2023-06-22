@@ -15,6 +15,9 @@ use Exception;
 use OCA\SketchPicker\Service\SketchService;
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http;
+use OCP\AppFramework\Http\Attribute\BruteForceProtection;
+use OCP\AppFramework\Http\Attribute\NoCSRFRequired;
+use OCP\AppFramework\Http\Attribute\PublicPage;
 use OCP\AppFramework\Http\DataDisplayResponse;
 use OCP\IRequest;
 use Throwable;
@@ -25,20 +28,18 @@ class FileController extends Controller {
 		string $appName,
 		IRequest $request,
 		private SketchService $sketchService,
-		private ?string $userId
 	) {
 		parent::__construct($appName, $request);
 	}
 
 	/**
-	 * @PublicPage
-	 * @NoCSRFRequired
-	 * @BruteForceProtection(action=getSketchFile)
-	 *
 	 * @param string $userId
 	 * @param string $id
 	 * @return DataDisplayResponse
 	 */
+	#[PublicPage]
+	#[NoCSRFRequired]
+	#[BruteForceProtection(action: 'getSketchFile')]
 	public function getSketchFile(string $userId, string $id): DataDisplayResponse {
 		try {
 			$file = $this->sketchService->getSketchFile($userId, $id);

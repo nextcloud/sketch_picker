@@ -415,6 +415,13 @@ export default {
 	}
 }
 
+// just get rid of the left sidebar as the draw tool is selected and it's the only one we want
+.FIE_tabs,
+.FIE_topbar-reset-button,
+.FIE_topbar-center-options {
+	display: none !important;
+}
+
 // Header buttons
 .FIE_topbar-center-options > button,
 .FIE_topbar-center-options > label {
@@ -606,4 +613,10 @@ export default {
 	filter: var(--background-invert-if-dark);
 }
 
+.SfxButton-Label {
+	font-size: inherit !important;
+	font-style: unset !important;
+	font-weight: inherit !important;
+	font-family: var(--font-face) !important;
+}
 </style>

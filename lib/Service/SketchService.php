@@ -12,58 +12,48 @@
 namespace OCA\SketchPicker\Service;
 
 use OC\User\NoUserException;
-use OCP\Files\File;
-use OCP\Files\IRootFolder;
+use OCP\Files\IAppData;
 use OCP\Files\NotFoundException;
 use OCP\Files\NotPermittedException;
+use OCP\Files\SimpleFS\ISimpleFile;
 
 class SketchService {
 
 	public function __construct(
 		string $appName,
-		private IRootFolder $root
+		private IAppData $appData
 	) {
 	}
 
 	/**
-	 * @param string $userId
 	 * @param string $name
-	 * @return File|null
-	 * @throws NoUserException
+	 * @return ISimpleFile|null
 	 * @throws NotFoundException
-	 * @throws NotPermittedException
 	 */
-	public function getSketchFile(string $userId, string $name): ?File {
-		$userFolder = $this->root->getUserFolder($userId);
-		$sketchFolder = $userFolder->get('Sketches');
+	public function getSketchFile(string $name): ?ISimpleFile {
+		try {
+			$sketchFolder = $this->appData->getFolder('sketches');
+		} catch (NotFoundException $e) {
+			return null;
+		}
 		$safeName = basename($name);
-		if ($sketchFolder->nodeExists($safeName)) {
-			$file = $sketchFolder->get($safeName);
-			if ($file instanceof File) {
-				return $file;
-			}
+		if ($sketchFolder->fileExists($safeName)) {
+			return $sketchFolder->getFile($safeName);
 		}
 		return null;
 	}
 
 	/**
-	 * @param string $userId
 	 * @param string $content
 	 * @param string $mimeType
 	 * @return string[]|null
-	 * @throws NoUserException
-	 * @throws NotFoundException
 	 * @throws NotPermittedException
 	 */
-	public function addSketch(string $userId, string $content, string $mimeType): ?array {
-		$userFolder = $this->root->getUserFolder($userId);
-		if (!$userFolder->nodeExists('Sketches')) {
-			$sketchFolder = $userFolder->newFolder('Sketches');
-		} else {
-			$sketchFolder = $userFolder->get('Sketches');
-			if ($sketchFolder instanceof File) {
-				throw new \Exception('/Sketches is a file');
-			}
+	public function addSketch(string $content, string $mimeType): ?array {
+		try {
+			$sketchFolder = $this->appData->getFolder('sketches');
+		} catch (NotFoundException $e) {
+			$sketchFolder = $this->appData->newFolder('sketches');
 		}
 
 		$mimeToExt = [
@@ -75,8 +65,8 @@ class SketchService {
 
 		$i = 1;
 		$base = md5($content);
-		if ($sketchFolder->nodeExists($base . '.' . $extension)) {
-			while ($sketchFolder->nodeExists($base . '-' . $i . '.' . $extension)) {
+		if ($sketchFolder->fileExists($base . '.' . $extension)) {
+			while ($sketchFolder->fileExists($base . '-' . $i . '.' . $extension)) {
 				$i++;
 			}
 			$fileName = $base . '-' . $i . '.' . $extension;
@@ -86,7 +76,6 @@ class SketchService {
 		$sketchFolder->newFile($fileName, $content);
 		return [
 			'name' => $fileName,
-			'userId' => $userId,
 		];
 	}
 }

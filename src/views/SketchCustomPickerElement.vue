@@ -64,7 +64,7 @@ export default {
 				const url = generateOcsUrl('apps/sketch_picker/api/v1/sketches')
 				return axios.post(url, params)
 					.then((response) => {
-						this.onSubmit(response.data.ocs.data.userId, response.data.ocs.data.name)
+						this.onSubmit(response.data.ocs.data.name)
 					})
 					.catch((error) => {
 						console.debug('sketch_picker request error', error)
@@ -94,9 +94,9 @@ export default {
 				reader.readAsDataURL(blob)
 			})
 		},
-		onSubmit(userId, fileName) {
+		onSubmit(fileName) {
 			const internalLink = window.location.protocol + '//' + window.location.host
-				+ generateUrl('/apps/sketch_picker/sketches/{userId}/{fileName}', { userId, fileName })
+				+ generateUrl('/apps/sketch_picker/sketches/{fileName}', { fileName })
 			this.$emit('submit', internalLink)
 		},
 	},

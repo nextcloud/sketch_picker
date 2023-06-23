@@ -18,7 +18,7 @@ return [
 	'routes' => [
 		['name' => 'config#setConfig', 'url' => '/config', 'verb' => 'PUT'],
 		['name' => 'config#setAdminConfig', 'url' => '/admin-config', 'verb' => 'PUT'],
-		['name' => 'file#getSketchFile', 'url' => '/sketches/{userId}/{id}', 'verb' => 'GET'],
+		['name' => 'file#getSketchFile', 'url' => '/sketches/{id}', 'verb' => 'GET'],
 	],
 
 	'ocs' => [

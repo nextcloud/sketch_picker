@@ -33,16 +33,15 @@ class FileController extends Controller {
 	}
 
 	/**
-	 * @param string $userId
 	 * @param string $id
 	 * @return DataDisplayResponse
 	 */
 	#[PublicPage]
 	#[NoCSRFRequired]
 	#[BruteForceProtection(action: 'getSketchFile')]
-	public function getSketchFile(string $userId, string $id): DataDisplayResponse {
+	public function getSketchFile(string $id): DataDisplayResponse {
 		try {
-			$file = $this->sketchService->getSketchFile($userId, $id);
+			$file = $this->sketchService->getSketchFile($id);
 			if ($file === null) {
 				throw new Exception('');
 			}

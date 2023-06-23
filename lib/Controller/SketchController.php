@@ -40,7 +40,7 @@ class SketchController extends OCSController {
 	public function addSketch(string $base64Content, string $mimeType): DataResponse {
 		try {
 			$binaryContent = base64_decode(str_replace('data:' . $mimeType . ';base64,', '', $base64Content));
-			$sketchInfo = $this->sketchService->addSketch($this->userId, $binaryContent, $mimeType);
+			$sketchInfo = $this->sketchService->addSketch($binaryContent, $mimeType);
 			return new DataResponse($sketchInfo);
 		} catch (Exception | Throwable $e) {
 			return new DataResponse(['error' => $e->getMessage()], Http::STATUS_BAD_REQUEST);

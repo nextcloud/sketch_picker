@@ -92,7 +92,6 @@ class SketchPickerReferenceProvider extends ADiscoverableReferenceProvider {
 			$reference = new Reference($referenceText);
 			$richObjectInfo = [
 				'url' => $referenceText,
-				'userId' => $info['userId'],
 				'fileName' => $info['fileName'],
 			];
 			$reference->setRichObject(
@@ -113,20 +112,18 @@ class SketchPickerReferenceProvider extends ADiscoverableReferenceProvider {
 		$start = $this->urlGenerator->getAbsoluteURL('/apps/' . Application::APP_ID);
 		$startIndex = $this->urlGenerator->getAbsoluteURL('/index.php/apps/' . Application::APP_ID);
 
-		// link example: https://nextcloud.local/index.php/apps/sketch_picker/sketches/user1/2d040f2e825de9242da9336bd9053125.webp
-		preg_match('/^' . preg_quote($start, '/') . '\/sketches\/([^\/?&]+)\/([^\/?&]+)$/i', $url, $matches);
+		// link example: https://nextcloud.local/index.php/apps/sketch_picker/sketches/2d040f2e825de9242da9336bd9053125.webp
+		preg_match('/^' . preg_quote($start, '/') . '\/sketches\/([^\/?&]+)$/i', $url, $matches);
 		if (count($matches) > 1) {
 			return [
-				'userId' => $matches[1],
-				'fileName' => $matches[2],
+				'fileName' => $matches[1],
 			];
 		}
 
-		preg_match('/^' . preg_quote($startIndex, '/') . '\/sketches\/([^\/?&]+)\/([^\/?&]+)$/i', $url, $matches);
+		preg_match('/^' . preg_quote($startIndex, '/') . '\/sketches\/([^\/?&]+)$/i', $url, $matches);
 		if (count($matches) > 1) {
 			return [
-				'userId' => $matches[1],
-				'fileName' => $matches[2],
+				'fileName' => $matches[1],
 			];
 		}
 

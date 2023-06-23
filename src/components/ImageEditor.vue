@@ -5,7 +5,7 @@
 import { emit } from '@nextcloud/event-bus'
 import { showError } from '@nextcloud/dialogs'
 
-// import translations from '../models/editorTranslations.js'
+import translations from '../editorTranslations.js'
 
 let TABS, TOOLS
 
@@ -47,7 +47,7 @@ export default {
 				annotationsCommon: {
 					fill: '#00000000',
 					stroke: '#000000',
-					strokeWidth: 2,
+					strokeWidth: 4,
 					shadowOffsetX: 0,
 					shadowOffsetY: 0,
 					shadowBlur: 0,
@@ -57,7 +57,23 @@ export default {
 				},
 
 				Pen: {
-					strokeWidth: 2,
+					strokeWidth: 4,
+				},
+				Line: {
+					strokeWidth: 4,
+				},
+				Text: {
+					strokeWidth: 0,
+					fill: '#000000',
+					fontFamily: 'Arial',
+					fontSize: 22,
+					letterSpacing: 0,
+					lineHeight: 1.3,
+					align: 'left',
+					fontStyle: 'bold',
+				},
+				Arrow: {
+					strokeWidth: 4,
 				},
 
 				// Displayed tabs, disabling watermark
@@ -73,7 +89,7 @@ export default {
 				// onModify: this.onModify,
 
 				// Translations
-				// translations,
+				translations,
 
 				theme: {
 					palette: {

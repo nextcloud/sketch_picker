@@ -12,6 +12,7 @@
 namespace OCA\SketchPicker\Controller;
 
 use Exception;
+use OCA\SketchPicker\Db\RecentSketchMapper;
 use OCA\SketchPicker\Service\SketchService;
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http;
@@ -28,6 +29,8 @@ class FileController extends Controller {
 		string $appName,
 		IRequest $request,
 		private SketchService $sketchService,
+		private RecentSketchMapper $recentSketchMapper,
+		private ?string $userId,
 	) {
 		parent::__construct($appName, $request);
 	}
@@ -44,6 +47,9 @@ class FileController extends Controller {
 			$file = $this->sketchService->getSketchFile($id);
 			if ($file === null) {
 				throw new Exception('');
+			}
+			if ($this->userId !== null) {
+				$this->recentSketchMapper->createRecentSketch($this->userId, $id);
 			}
 			return new DataDisplayResponse($file->getContent(), Http::STATUS_OK, [
 				'Content-Type' => $file->getMimeType(),

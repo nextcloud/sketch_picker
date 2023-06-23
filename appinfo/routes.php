@@ -23,5 +23,6 @@ return [
 
 	'ocs' => [
 		['name' => 'sketch#addSketch', 'url' => '/api/{apiVersion}/sketches', 'verb' => 'POST', 'requirements' => $requirements],
+		['name' => 'sketch#getRecentlySeenSketches', 'url' => '/api/{apiVersion}/recently-seen', 'verb' => 'GET', 'requirements' => $requirements],
 	],
 ];

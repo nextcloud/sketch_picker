@@ -4,7 +4,7 @@
 	<name>Sketch picker</name>
 	<summary>Quickly draw and share sketches</summary>
 	<description><![CDATA[This app adds a smart picker provider to quickly draw sketches and insert them in your current context.]]></description>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<licence>agpl</licence>
 	<author>Julien Veyssier</author>
 	<namespace>SketchPicker</namespace>

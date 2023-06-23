@@ -22,6 +22,8 @@ class Application extends App implements IBootstrap {
 
 	public const APP_ID = 'sketch_picker';
 
+	public const MAX_RECENT_SKETCHES_PER_USER = 10;
+
 	public function __construct(array $urlParams = []) {
 		parent::__construct(self::APP_ID, $urlParams);
 	}

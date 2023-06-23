@@ -46,4 +46,17 @@ class SketchController extends OCSController {
 			return new DataResponse(['error' => $e->getMessage()], Http::STATUS_BAD_REQUEST);
 		}
 	}
+
+	/**
+	 * @return DataResponse
+	 */
+	#[NoAdminRequired]
+	public function getRecentlySeenSketches(): DataResponse {
+		try {
+			$sketches = $this->sketchService->getRecentlySeenSketches($this->userId);
+			return new DataResponse($sketches);
+		} catch (Exception | Throwable $e) {
+			return new DataResponse(['error' => $e->getMessage()], Http::STATUS_BAD_REQUEST);
+		}
+	}
 }

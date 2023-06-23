@@ -3,13 +3,35 @@
 		<h2>
 			{{ t('sketch_picker', 'Draw a sketch') }}
 		</h2>
-		<NcButton @click="onOpenFile">
-			<template #icon>
-				<FolderIcon />
-			</template>
-			{{ t('sketch_picker', 'Open from Files') }}
-		</NcButton>
-		<ImageEditor
+		<div v-if="!pickingRecent"
+			class="header">
+			<NcButton @click="onOpenFile">
+				<template #icon>
+					<FolderIcon />
+				</template>
+				{{ t('sketch_picker', 'Open from Files') }}
+			</NcButton>
+			<NcButton @click="pickingRecent = true">
+				<template #icon>
+					<HistoryIcon />
+				</template>
+				{{ t('sketch_picker', 'Open recently seen sketch') }}
+			</NcButton>
+		</div>
+		<div v-if="pickingRecent"
+			class="recent-sketches">
+			<div class="images">
+				<img v-for="r in recentlySeenSketches"
+					:key="r"
+					class="image"
+					:src="getRecentUrl(r)"
+					@click="onPickRecent(r)">
+			</div>
+			<NcButton @click="pickingRecent = false">
+				{{ t('sketch_picker', 'Cancel') }}
+			</NcButton>
+		</div>
+		<ImageEditor v-show="!pickingRecent"
 			:src="initialImageUrl"
 			@submit="onEditorSubmit" />
 	</div>
@@ -17,6 +39,7 @@
 
 <script>
 import FolderIcon from 'vue-material-design-icons/Folder.vue'
+import HistoryIcon from 'vue-material-design-icons/History.vue'
 
 import NcButton from '@nextcloud/vue/dist/Components/NcButton.js'
 
@@ -33,6 +56,7 @@ export default {
 		ImageEditor,
 		NcButton,
 		FolderIcon,
+		HistoryIcon,
 	},
 
 	props: {
@@ -49,6 +73,8 @@ export default {
 	data() {
 		return {
 			initialImageUrl: imagePath('sketch_picker', 'white.png'),
+			recentlySeenSketches: [],
+			pickingRecent: false,
 		}
 	},
 
@@ -59,12 +85,30 @@ export default {
 	},
 
 	mounted() {
+		this.getRecentlySeenSketches()
 	},
 
 	beforeDestroy() {
 	},
 
 	methods: {
+		getRecentUrl(name) {
+			return generateUrl('apps/sketch_picker/sketches/{name}', { name })
+		},
+		getRecentlySeenSketches() {
+			const url = generateOcsUrl('apps/sketch_picker/api/v1/recently-seen')
+			return axios.get(url)
+				.then((response) => {
+					this.recentlySeenSketches = response.data.ocs.data
+				})
+				.catch((error) => {
+					console.debug('sketch_picker request error', error)
+				})
+		},
+		onPickRecent(name) {
+			this.initialImageUrl = this.getRecentUrl(name)
+			this.pickingRecent = false
+		},
 		onOpenFile() {
 			const picker = getFilePickerBuilder(t('sketch_picker', 'Choose a file to draw a sketch on'))
 				.setMultiSelect(false)
@@ -149,5 +193,24 @@ export default {
 		align-items: center;
 	}
 
+	.header {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.recent-sketches {
+		display: flex;
+		flex-direction: column;
+		.images {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8px;
+			align-items: center;
+			.image {
+				height: 100px;
+			}
+		}
+	}
 }
 </style>

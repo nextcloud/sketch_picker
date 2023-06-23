@@ -12,6 +12,8 @@
 namespace OCA\SketchPicker\Service;
 
 use OC\User\NoUserException;
+use OCA\SketchPicker\Db\RecentSketchMapper;
+use OCP\DB\Exception;
 use OCP\Files\IAppData;
 use OCP\Files\NotFoundException;
 use OCP\Files\NotPermittedException;
@@ -21,7 +23,8 @@ class SketchService {
 
 	public function __construct(
 		string $appName,
-		private IAppData $appData
+		private IAppData $appData,
+		private RecentSketchMapper $recentSketchMapper,
 	) {
 	}
 
@@ -77,5 +80,27 @@ class SketchService {
 		return [
 			'name' => $fileName,
 		];
+	}
+
+	/**
+	 * @param string $userId
+	 * @return array
+	 * @throws Exception
+	 */
+	public function getRecentlySeenSketches(string $userId): array {
+		try {
+			$sketchFolder = $this->appData->getFolder('sketches');
+		} catch (NotFoundException $e) {
+			return [];
+		}
+
+		$existingSketches = [];
+		$dbSketches = $this->recentSketchMapper->getRecentSketchesOfUser($userId);
+		foreach ($dbSketches as $sketch) {
+			if ($sketchFolder->fileExists($sketch->getFileName())) {
+				$existingSketches[] = $sketch->getFileName();
+			}
+		}
+		return $existingSketches;
 	}
 }

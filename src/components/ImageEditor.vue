@@ -7,7 +7,10 @@ import { showError } from '@nextcloud/dialogs'
 
 import translations from '../editorTranslations.js'
 
-let TABS, TOOLS
+// Lazy load the image editor
+const FilerobotImageEditor = (await import(/* webpackChunkName: 'filerobot' */'filerobot-image-editor')).default
+const TABS = FilerobotImageEditor.TABS
+const TOOLS = FilerobotImageEditor.TOOLS
 
 export default {
 	name: 'ImageEditor',
@@ -142,12 +145,19 @@ export default {
 		},
 	},
 
-	async mounted() {
-		// Lazy load the image editor
-		const FilerobotImageEditor = (await import(/* webpackChunkName: 'filerobot' */'filerobot-image-editor')).default
-		TABS = FilerobotImageEditor.TABS
-		TOOLS = FilerobotImageEditor.TOOLS
+	watch: {
+		src(newValue) {
+			this.imageEditor.terminate()
+			this.imageEditor = new FilerobotImageEditor(
+				this.$refs.editor,
+				this.config
+			)
+			this.imageEditor.render()
+			return false
+		},
+	},
 
+	async mounted() {
 		this.imageEditor = new FilerobotImageEditor(
 			this.$refs.editor,
 			this.config

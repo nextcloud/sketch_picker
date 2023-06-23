@@ -3,6 +3,12 @@
 		<h2>
 			{{ t('sketch_picker', 'Draw a sketch') }}
 		</h2>
+		<NcButton @click="onOpenFile">
+			<template #icon>
+				<FolderIcon />
+			</template>
+			{{ t('sketch_picker', 'Open from Files') }}
+		</NcButton>
 		<ImageEditor
 			:src="initialImageUrl"
 			@submit="onEditorSubmit" />
@@ -10,17 +16,23 @@
 </template>
 
 <script>
-import ImageEditor from '../components/ImageEditor.vue'
+import FolderIcon from 'vue-material-design-icons/Folder.vue'
+
+import NcButton from '@nextcloud/vue/dist/Components/NcButton.js'
 
 import axios from '@nextcloud/axios'
 import { generateOcsUrl, generateUrl, imagePath } from '@nextcloud/router'
-import { showError } from '@nextcloud/dialogs'
+import { showError, getFilePickerBuilder, FilePickerType } from '@nextcloud/dialogs'
+
+import ImageEditor from '../components/ImageEditor.vue'
 
 export default {
 	name: 'SketchCustomPickerElement',
 
 	components: {
 		ImageEditor,
+		NcButton,
+		FolderIcon,
 	},
 
 	props: {
@@ -53,6 +65,24 @@ export default {
 	},
 
 	methods: {
+		onOpenFile() {
+			const picker = getFilePickerBuilder(t('sketch_picker', 'Choose a file to draw a sketch on'))
+				.setMultiSelect(false)
+				.setMimeTypeFilter(['image/jpeg', 'image/png', 'image/webp'])
+				.setModal(true)
+				.setType(FilePickerType.Choose)
+				.allowDirectories(false)
+				.build()
+
+			return picker
+				.pick()
+				.then((path) => {
+					const cleanPath = path.replace(/^\//, '')
+					const fileUrl = generateUrl('/remote.php/webdav/' + cleanPath).replace(/\/index\.php\//, '/')
+					this.initialImageUrl = fileUrl
+				})
+				.catch((e) => console.error('not saved', { error: e }))
+		},
 		async onEditorSubmit({ fileName, mimeType, blob }) {
 			try {
 				this.loading = true

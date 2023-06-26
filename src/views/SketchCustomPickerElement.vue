@@ -18,19 +18,11 @@
 				{{ t('sketch_picker', 'Open recently seen sketch') }}
 			</NcButton>
 		</div>
-		<div v-if="pickingRecent"
-			class="recent-sketches">
-			<div class="images">
-				<img v-for="r in recentlySeenSketches"
-					:key="r"
-					class="image"
-					:src="getRecentUrl(r)"
-					@click="onPickRecent(r)">
-			</div>
-			<NcButton @click="pickingRecent = false">
-				{{ t('sketch_picker', 'Cancel') }}
-			</NcButton>
-		</div>
+		<RecentSketches v-if="pickingRecent"
+			class="recent"
+			:sketches="recentlySeenSketches"
+			@submit="onPickRecent"
+			@cancel="pickingRecent = false" />
 		<ImageEditor v-show="!pickingRecent"
 			:src="initialImageUrl"
 			@submit="onEditorSubmit" />
@@ -48,11 +40,13 @@ import { generateOcsUrl, generateUrl, imagePath } from '@nextcloud/router'
 import { showError, getFilePickerBuilder, FilePickerType } from '@nextcloud/dialogs'
 
 import ImageEditor from '../components/ImageEditor.vue'
+import RecentSketches from '../components/RecentSketches.vue'
 
 export default {
 	name: 'SketchCustomPickerElement',
 
 	components: {
+		RecentSketches,
 		ImageEditor,
 		NcButton,
 		FolderIcon,
@@ -186,7 +180,7 @@ export default {
 	justify-content: center;
 	overflow-y: auto;
 	max-height: 800px;
-	padding: 12px 16px 0 16px;
+	padding: 12px 16px 16px 16px;
 
 	h2 {
 		display: flex;
@@ -197,20 +191,6 @@ export default {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-	}
-
-	.recent-sketches {
-		display: flex;
-		flex-direction: column;
-		.images {
-			display: flex;
-			flex-wrap: wrap;
-			gap: 8px;
-			align-items: center;
-			.image {
-				height: 100px;
-			}
-		}
 	}
 }
 </style>

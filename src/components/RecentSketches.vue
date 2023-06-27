@@ -29,9 +29,11 @@
 				:is-small="true"
 				@click.native="$emit('submit', r)" />
 		</div>
-		<NcButton @click="$emit('cancel')">
-			{{ t('sketch_picker', 'Cancel') }}
-		</NcButton>
+		<div class="footer">
+			<NcButton @click="$emit('cancel')">
+				{{ t('sketch_picker', 'Cancel') }}
+			</NcButton>
+		</div>
 	</div>
 </template>
 
@@ -89,6 +91,12 @@ export default {
 		flex-wrap: wrap;
 		gap: 8px;
 		align-items: center;
+	}
+
+	.footer {
+		display: flex;
+		align-items: center;
+		justify-content: end;
 	}
 }
 </style>

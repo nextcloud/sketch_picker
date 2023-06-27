@@ -22,11 +22,12 @@
 <template>
 	<div class="recent-sketches">
 		<div class="images">
-			<img v-for="r in sketches"
+			<SketchImage v-for="r in sketches"
 				:key="r"
-				class="image"
-				:src="getRecentUrl(r)"
-				@click="$emit('submit', r)">
+				:url="getRecentUrl(r)"
+				:is-link="false"
+				:is-small="true"
+				@click.native="$emit('submit', r)" />
 		</div>
 		<NcButton @click="$emit('cancel')">
 			{{ t('sketch_picker', 'Cancel') }}
@@ -37,12 +38,15 @@
 <script>
 import NcButton from '@nextcloud/vue/dist/Components/NcButton.js'
 
+import SketchImage from './SketchImage.vue'
+
 import { generateUrl } from '@nextcloud/router'
 
 export default {
 	name: 'RecentSketches',
 
 	components: {
+		SketchImage,
 		NcButton,
 	},
 
@@ -79,16 +83,12 @@ export default {
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
+
 	.images {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 8px;
 		align-items: center;
-		.image {
-			height: 100px;
-			border-radius: var(--border-radius);
-			cursor: pointer;
-		}
 	}
 }
 </style>

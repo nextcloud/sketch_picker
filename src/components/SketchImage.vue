@@ -20,34 +20,53 @@
   -->
 
 <template>
-	<div class="sketch-reference">
-		<SketchImage
-			:url="richObject.url"
-			:is-link="true"
-			:is-small="false" />
+	<div class="sketch-wrapper">
+		<div v-if="!isLoaded" class="loading-icon">
+			<NcLoadingIcon
+				:size="44"
+				:title="t('sketch_picker', 'Loading sketch')" />
+		</div>
+		<div v-if="isLink">
+			<a v-show="isLoaded"
+				:href="url"
+				target="_blank">
+				<img
+					class="image"
+					:class="{ big: !isSmall, small: isSmall }"
+					:src="url"
+					@load="isLoaded = true">
+			</a>
+		</div>
+		<div v-else>
+			<img v-show="isLoaded"
+				class="image"
+				:class="{ big: !isSmall, small: isSmall }"
+				:src="url"
+				@load="isLoaded = true">
+		</div>
 	</div>
 </template>
 
 <script>
-import SketchImage from '../components/SketchImage.vue'
+import NcLoadingIcon from '@nextcloud/vue/dist/Components/NcLoadingIcon.js'
 
 export default {
-	name: 'SketchReferenceWidget',
+	name: 'SketchImage',
 
 	components: {
-		SketchImage,
+		NcLoadingIcon,
 	},
 
 	props: {
-		richObjectType: {
+		url: {
 			type: String,
-			default: '',
+			required: true,
 		},
-		richObject: {
-			type: Object,
-			default: null,
+		isLink: {
+			type: Boolean,
+			default: true,
 		},
-		accessible: {
+		isSmall: {
 			type: Boolean,
 			default: true,
 		},
@@ -55,6 +74,7 @@ export default {
 
 	data() {
 		return {
+			isLoaded: false,
 		}
 	},
 
@@ -67,8 +87,23 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.sketch-reference {
-	width: 100%;
-	padding: 12px;
+.sketch-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+
+	.image {
+		border-radius: var(--border-radius);
+		cursor: pointer;
+
+		&.small {
+			height: 100px;
+		}
+		&.big {
+			max-height: 300px;
+			max-width: 100%;
+		}
+	}
 }
 </style>

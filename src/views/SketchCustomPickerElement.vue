@@ -25,7 +25,8 @@
 			@cancel="pickingRecent = false" />
 		<ImageEditor v-show="!pickingRecent"
 			:src="initialImageUrl"
-			@submit="onEditorSubmit" />
+			@submit="onEditorSubmit"
+			@cancel="$emit('cancel')" />
 	</div>
 </template>
 

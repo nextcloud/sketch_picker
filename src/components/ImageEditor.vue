@@ -261,10 +261,8 @@ export default {
 			}
 			// escape key
 			if (event.key === 'Escape') {
-				// Since we cannot call the closeMethod and know if there
-				// are unsaved changes, let's fake a close button trigger.
 				event.preventDefault()
-				document.querySelector('.FIE_topbar-close-button').click()
+				this.$emit('cancel')
 			}
 
 			// ctrl + S = save

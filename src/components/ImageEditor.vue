@@ -134,14 +134,18 @@ export default {
 		},
 
 		themeDataAttr() {
+			return {}
+			/*
 			if (this.hasHighContrastEnabled) {
 				return {
 					'data-theme-dark-highcontrast': true,
 				}
 			}
+			const themes = OCA?.Theming?.enabledThemes || []
 			return {
-				'data-theme-dark': true,
+				'data-theme-dark': themes.find(theme => theme.indexOf('dark') !== -1),
 			}
+			*/
 		},
 	},
 

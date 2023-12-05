@@ -102,7 +102,7 @@ export default {
 						'accent-primary': 'var(--color-primary-element)',
 						// Use by the slider
 						'border-active-bottom': 'var(--color-primary-element)',
-						'icons-primary': 'var(--color-main-text)',
+						'icon-primary': 'var(--color-main-text)',
 						// Active state
 						'bg-primary-active': 'var(--color-background-dark)',
 						'bg-primary-hover': 'var(--color-background-hover)',
@@ -154,7 +154,7 @@ export default {
 			this.imageEditor.terminate()
 			this.imageEditor = new FilerobotImageEditor(
 				this.$refs.editor,
-				this.config
+				this.config,
 			)
 			this.imageEditor.render()
 			return false
@@ -164,7 +164,7 @@ export default {
 	async mounted() {
 		this.imageEditor = new FilerobotImageEditor(
 			this.$refs.editor,
-			this.config
+			this.config,
 		)
 		this.imageEditor.render()
 		window.addEventListener('keydown', this.handleKeydown, true)
@@ -253,7 +253,7 @@ export default {
 						return
 					}
 					this.onClose('warning-ignored', false)
-				}
+				},
 			)
 		},
 
@@ -560,6 +560,10 @@ export default {
 // Save button fixes
 .FIE_topbar-save-wrapper {
 	width: auto !important;
+}
+
+.FIE_tabs_toggle_btn {
+	display: none !important;
 }
 
 .FIE_topbar-save-button {

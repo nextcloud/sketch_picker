@@ -108,7 +108,7 @@ export default {
 			const picker = getFilePickerBuilder(t('sketch_picker', 'Choose a file to draw a sketch on'))
 				.setMultiSelect(false)
 				.setMimeTypeFilter(['image/jpeg', 'image/png', 'image/webp'])
-				.setModal(true)
+				// .setModal(true)
 				.setType(FilePickerType.Choose)
 				.allowDirectories(false)
 				.build()
@@ -144,7 +144,7 @@ export default {
 								|| error.response?.data?.body?.error?.code
 								|| error.response?.data?.error
 								|| t('sketch_picker', 'Unknown Sketch Picker API error')
-							)
+							),
 						)
 					})
 					.then(() => {

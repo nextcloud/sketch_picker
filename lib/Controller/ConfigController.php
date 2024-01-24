@@ -11,13 +11,13 @@
 
 namespace OCA\SketchPicker\Controller;
 
-use OCP\AppFramework\Http\Attribute\NoAdminRequired;
-use OCP\IConfig;
-use OCP\IRequest;
-use OCP\AppFramework\Http\DataResponse;
-use OCP\AppFramework\Controller;
-
 use OCA\SketchPicker\AppInfo\Application;
+use OCP\AppFramework\Controller;
+use OCP\AppFramework\Http\Attribute\NoAdminRequired;
+use OCP\AppFramework\Http\DataResponse;
+use OCP\IConfig;
+
+use OCP\IRequest;
 use OCP\PreConditionNotMetException;
 
 class ConfigController extends Controller {

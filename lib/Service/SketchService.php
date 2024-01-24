@@ -11,7 +11,6 @@
 
 namespace OCA\SketchPicker\Service;
 
-use OC\User\NoUserException;
 use OCA\SketchPicker\Db\RecentSketchMapper;
 use OCP\DB\Exception;
 use OCP\Files\IAppData;

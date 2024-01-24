@@ -22,9 +22,9 @@
 
 namespace OCA\SketchPicker\Reference;
 
-use OCP\Collaboration\Reference\ADiscoverableReferenceProvider;
 use OC\Collaboration\Reference\ReferenceManager;
 use OCA\SketchPicker\AppInfo\Application;
+use OCP\Collaboration\Reference\ADiscoverableReferenceProvider;
 use OCP\Collaboration\Reference\IReference;
 use OCP\Collaboration\Reference\Reference;
 use OCP\IL10N;
@@ -45,7 +45,7 @@ class SketchPickerReferenceProvider extends ADiscoverableReferenceProvider {
 	/**
 	 * @inheritDoc
 	 */
-	public function getId(): string	{
+	public function getId(): string {
 		return 'sketch_picker-draw';
 	}
 
@@ -59,7 +59,7 @@ class SketchPickerReferenceProvider extends ADiscoverableReferenceProvider {
 	/**
 	 * @inheritDoc
 	 */
-	public function getOrder(): int	{
+	public function getOrder(): int {
 		return 10;
 	}
 

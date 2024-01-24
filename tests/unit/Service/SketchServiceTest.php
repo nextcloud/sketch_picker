@@ -3,7 +3,6 @@
 namespace OCA\SketchPicker\Tests;
 
 use OCA\SketchPicker\AppInfo\Application;
-use OCA\SketchPicker\Service\SketchService;
 
 class SketchServiceTest extends \PHPUnit\Framework\TestCase {
 

@@ -22,7 +22,7 @@
 
 namespace OCA\SketchPicker\Reference;
 
-use OC\Collaboration\Reference\ReferenceManager;
+use OCP\Collaboration\Reference\IReferenceManager;
 use OCA\SketchPicker\AppInfo\Application;
 use OCP\Collaboration\Reference\ADiscoverableReferenceProvider;
 use OCP\Collaboration\Reference\IReference;
@@ -37,7 +37,7 @@ class SketchPickerReferenceProvider extends ADiscoverableReferenceProvider {
 	public function __construct(
 		private IL10N $l10n,
 		private IURLGenerator $urlGenerator,
-		private ReferenceManager $referenceManager,
+		private IReferenceManager $referenceManager,
 		private ?string $userId
 	) {
 	}

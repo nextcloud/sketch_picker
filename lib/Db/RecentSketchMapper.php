@@ -34,6 +34,9 @@ use OCP\DB\Exception;
 use OCP\DB\QueryBuilder\IQueryBuilder;
 use OCP\IDBConnection;
 
+/**
+ * @extends QBMapper<RecentSketch>
+ */
 class RecentSketchMapper extends QBMapper {
 	public function __construct(IDBConnection $db) {
 		parent::__construct($db, 'sketch_pk_recent', RecentSketch::class);

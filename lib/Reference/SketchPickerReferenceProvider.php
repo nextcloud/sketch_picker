@@ -22,10 +22,10 @@
 
 namespace OCA\SketchPicker\Reference;
 
-use OCP\Collaboration\Reference\IReferenceManager;
 use OCA\SketchPicker\AppInfo\Application;
 use OCP\Collaboration\Reference\ADiscoverableReferenceProvider;
 use OCP\Collaboration\Reference\IReference;
+use OCP\Collaboration\Reference\IReferenceManager;
 use OCP\Collaboration\Reference\Reference;
 use OCP\IL10N;
 

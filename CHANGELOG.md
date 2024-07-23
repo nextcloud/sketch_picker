@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## 2.0.0 – 2024-07-23
+
+### Changed
+
+- Support NC 30 only
+- Update npm pkgs
+- Style adjustments for nc/vue 8.15.0 and NC 30
+
 ## 1.0.2 – 2024-03-15
 
 ### Changed

@@ -354,8 +354,11 @@ export default {
 .SfxInput-root {
 	height: auto !important;
 	padding: 0 !important;
+	border-radius: var(--border-radius-large) !important;
 	.SfxInput-Base {
 		margin: 0 !important;
+		width: 100% !important;
+		min-width: unset !important;
 	}
 }
 
@@ -366,9 +369,11 @@ export default {
 
 // Global buttons
 .SfxButton-root {
-	min-height: 44px !important;
+	min-height: var(--default-clickable-area) !important;
+	height: var(--default-clickable-area) !important;
 	margin: 0 !important;
 	border: transparent !important;
+	border-radius: var(--border-radius-element) !important;
 	&[color='error'] {
 		color: white  !important;
 		background-color: var(--color-error) !important;
@@ -390,7 +395,7 @@ export default {
 
 // Menu items
 .SfxMenuItem-root {
-	height: 44px;
+	height: var(--default-clickable-area) !important;
 	padding-left: 8px !important;
 	// Center the menu entry icon and fix width
 	> div {

@@ -18,6 +18,6 @@
 	<screenshot>https://github.com/julien-nc/sketch_picker/raw/main/img/screenshots/screenshot2.jpg</screenshot>
 	<screenshot>https://github.com/julien-nc/sketch_picker/raw/main/img/screenshots/screenshot3.jpg</screenshot>
 	<dependencies>
-		<nextcloud min-version="30" max-version="30"/>
+		<nextcloud min-version="30" max-version="31"/>
 	</dependencies>
 </info>

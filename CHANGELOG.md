@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## 2.1.0 – 2025-01-09
+
+### Changed
+
+- Support NC 31
+- Update composer and npm dependencies
+
 ## 2.0.0 – 2024-07-23
 
 ### Changed

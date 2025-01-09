@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Nextcloud - SketchPicker
  *
@@ -54,7 +55,7 @@ class FileController extends Controller {
 			return new DataDisplayResponse($file->getContent(), Http::STATUS_OK, [
 				'Content-Type' => $file->getMimeType(),
 			]);
-		} catch (Exception | Throwable $e) {
+		} catch (Exception|Throwable $e) {
 			$response = new DataDisplayResponse('', Http::STATUS_BAD_REQUEST);
 			$response->throttle(['id' => $id]);
 			return $response;

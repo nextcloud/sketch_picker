@@ -136,7 +136,7 @@ class RecentSketchMapper extends QBMapper {
 	public function createRecentSketch(string $userId, string $fileName, ?int $timestamp = null): ?RecentSketch {
 		try {
 			$recentSketch = $this->getRecentSketchOfUserByFileName($userId, $fileName);
-		} catch (DoesNotExistException | MultipleObjectsReturnedException $e) {
+		} catch (DoesNotExistException|MultipleObjectsReturnedException $e) {
 			// only create it if it does not exist
 			$recentSketch = new RecentSketch();
 			$recentSketch->setFileName($fileName);

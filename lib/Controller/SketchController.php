@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Nextcloud - SketchPicker
  *
@@ -26,7 +27,7 @@ class SketchController extends OCSController {
 		string $appName,
 		IRequest $request,
 		private SketchService $sketchService,
-		private ?string $userId
+		private ?string $userId,
 	) {
 		parent::__construct($appName, $request);
 	}
@@ -42,7 +43,7 @@ class SketchController extends OCSController {
 			$binaryContent = base64_decode(str_replace('data:' . $mimeType . ';base64,', '', $base64Content));
 			$sketchInfo = $this->sketchService->addSketch($binaryContent, $mimeType);
 			return new DataResponse($sketchInfo);
-		} catch (Exception | Throwable $e) {
+		} catch (Exception|Throwable $e) {
 			return new DataResponse(['error' => $e->getMessage()], Http::STATUS_BAD_REQUEST);
 		}
 	}
@@ -55,7 +56,7 @@ class SketchController extends OCSController {
 		try {
 			$sketches = $this->sketchService->getRecentlySeenSketches($this->userId);
 			return new DataResponse($sketches);
-		} catch (Exception | Throwable $e) {
+		} catch (Exception|Throwable $e) {
 			return new DataResponse(['error' => $e->getMessage()], Http::STATUS_BAD_REQUEST);
 		}
 	}

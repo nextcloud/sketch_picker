@@ -69,10 +69,10 @@ class SketchService {
 		$i = 1;
 		$base = md5($content);
 		if ($sketchFolder->fileExists($base . '.' . $extension)) {
-			while ($sketchFolder->fileExists($base . '-' . $i . '.' . $extension)) {
+			while ($sketchFolder->fileExists($base . '-' . strval($i) . '.' . $extension)) {
 				$i++;
 			}
-			$fileName = $base . '-' . $i . '.' . $extension;
+			$fileName = $base . '-' . strval($i) . '.' . $extension;
 		} else {
 			$fileName = $base . '.' . $extension;
 		}

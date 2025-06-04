@@ -5,7 +5,8 @@
 	findUnusedBaselineEntry="true"
 	findUnusedCode="false"
 	resolveFromConfigFile="true"
-	phpVersion="8.0"
+	ensureOverrideAttribute="false"
+	phpVersion="8.1"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns="https://getpsalm.org/schema/config"
 	xsi:schemaLocation="https://getpsalm.org/schema/config vendor-bin/psalm/vendor/vimeo/psalm/config.xsd"
@@ -24,16 +25,6 @@
 		<LessSpecificReturnType errorLevel="error"/>
 		<LessSpecificImplementedReturnType errorLevel="error"/>
 		<MoreSpecificReturnType errorLevel="error"/>
-		<UndefinedClass>
-			<errorLevel type="suppress">
-				<referencedClass name="OC" />
-				<referencedClass name="Symfony\Component\Console\Input\InputOption" />
-				<referencedClass name="Symfony\Component\Console\Input\InputArgument" />
-				<referencedClass name="Symfony\Component\Console\Input\InputInterface" />
-				<referencedClass name="Symfony\Component\Console\Output\OutputInterface" />
-				<referencedClass name="Doctrine\DBAL\Types\Type" />
-			</errorLevel>
-		</UndefinedClass>
 		<UndefinedDocblockClass>
 			<errorLevel type="suppress">
 				<referencedClass name="Doctrine\DBAL\Schema\Table" />
@@ -44,11 +35,5 @@
 				<referencedClass name="Doctrine\DBAL\Types\Type" />
 			</errorLevel>
 		</UndefinedDocblockClass>
-		<InvalidClass>
-			<errorLevel type="suppress">
-				<referencedClass name="OCP\Db\Exception" />
-				<referencedClass name="OCP\AppFramework\Db\QBMapper" />
-			</errorLevel>
-		</InvalidClass>
 	</issueHandlers>
 </psalm>

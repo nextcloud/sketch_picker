@@ -26,7 +26,7 @@
 		<ImageEditor v-show="!pickingRecent"
 			:src="initialImageUrl"
 			@submit="onEditorSubmit"
-			@cancel="$emit('cancel')" />
+			@cancel-edit="$emit('cancel')" />
 	</div>
 </template>
 
@@ -34,11 +34,12 @@
 import FolderIcon from 'vue-material-design-icons/Folder.vue'
 import HistoryIcon from 'vue-material-design-icons/History.vue'
 
-import NcButton from '@nextcloud/vue/dist/Components/NcButton.js'
+import NcButton from '@nextcloud/vue/components/NcButton'
 
 import axios from '@nextcloud/axios'
 import { generateOcsUrl, generateUrl, imagePath } from '@nextcloud/router'
 import { showError, getFilePickerBuilder, FilePickerType } from '@nextcloud/dialogs'
+import '@nextcloud/dialogs/style.css'
 
 import ImageEditor from '../components/ImageEditor.vue'
 import RecentSketches from '../components/RecentSketches.vue'

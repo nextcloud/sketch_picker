@@ -4,6 +4,7 @@
 <script>
 import { emit } from '@nextcloud/event-bus'
 import { showError } from '@nextcloud/dialogs'
+import '@nextcloud/dialogs/style.css'
 
 import translations from '../editorTranslations.js'
 
@@ -21,6 +22,8 @@ export default {
 			required: true,
 		},
 	},
+
+	emits: ['cancel-edit'],
 
 	data() {
 		return {
@@ -266,7 +269,7 @@ export default {
 			// escape key
 			if (event.key === 'Escape') {
 				event.preventDefault()
-				this.$emit('cancel')
+				this.$emit('cancel-edit')
 			}
 
 			// ctrl + S = save

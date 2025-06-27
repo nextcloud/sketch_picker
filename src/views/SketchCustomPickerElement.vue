@@ -7,7 +7,7 @@
 			class="header">
 			<NcButton @click="onOpenFile">
 				<template #icon>
-					<FolderIcon />
+					<FolderOutlineIcon />
 				</template>
 				{{ t('sketch_picker', 'Open from Files') }}
 			</NcButton>
@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import FolderIcon from 'vue-material-design-icons/Folder.vue'
+import FolderOutlineIcon from 'vue-material-design-icons/FolderOutline.vue'
 import HistoryIcon from 'vue-material-design-icons/History.vue'
 
 import NcButton from '@nextcloud/vue/dist/Components/NcButton.js'
@@ -50,7 +50,7 @@ export default {
 		RecentSketches,
 		ImageEditor,
 		NcButton,
-		FolderIcon,
+		FolderOutlineIcon,
 		HistoryIcon,
 	},
 

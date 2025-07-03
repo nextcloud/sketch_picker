@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## 2.2.0 – 2025-07-03
+
+### Changed
+
+- Support Nextcloud 32
+- Use outlined icons
+
 ## 2.1.0 – 2025-01-09
 
 ### Changed

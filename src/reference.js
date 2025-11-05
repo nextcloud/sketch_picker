@@ -19,7 +19,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { registerWidget, registerCustomPickerElement, NcCustomPickerRenderResult } from '@nextcloud/vue/dist/Components/NcRichText.js'
+import { registerWidget, registerCustomPickerElement, NcCustomPickerRenderResult } from '@nextcloud/vue/components/NcRichText'
 import { linkTo } from '@nextcloud/router'
 import { getRequestToken } from '@nextcloud/auth'
 
@@ -27,31 +27,36 @@ __webpack_nonce__ = btoa(getRequestToken()) // eslint-disable-line
 __webpack_public_path__ = linkTo('sketch_picker', 'js/') // eslint-disable-line
 
 registerCustomPickerElement('sketch_picker-draw', async (el, { providerId, accessible }) => {
-	const { default: Vue } = await import(/* webpackChunkName: "reference-picker-lazy" */'vue')
-	Vue.mixin({ methods: { t, n } })
-	const { default: SketchCustomPickerElement } = await import(/* webpackChunkName: "reference-picker-lazy" */'./views/SketchCustomPickerElement.vue')
-	const Element = Vue.extend(SketchCustomPickerElement)
-	const vueElement = new Element({
-		propsData: {
+	const { createApp } = await import('vue')
+	const { default: SketchCustomPickerElement } = await import('./views/SketchCustomPickerElement.vue')
+
+	const app = createApp(
+		SketchCustomPickerElement,
+		{
 			providerId,
 			accessible,
 		},
-	}).$mount(el)
-	return new NcCustomPickerRenderResult(vueElement.$el, vueElement)
+	)
+	app.mixin({ methods: { t, n } })
+	app.mount(el)
+
+	return new NcCustomPickerRenderResult(el, app)
 }, (el, renderResult) => {
-	renderResult.object.$destroy()
+	renderResult.object.unmount()
 }, 'large')
 
 registerWidget('sketch_picker_sketch', async (el, { richObjectType, richObject, accessible }) => {
-	const { default: Vue } = await import(/* webpackChunkName: "vue-lazy" */'vue')
-	Vue.mixin({ methods: { t, n } })
+	const { createApp } = await import('vue')
 	const { default: SketchReferenceWidget } = await import(/* webpackChunkName: "reference-sketch-lazy" */'./views/SketchReferenceWidget.vue')
-	const Widget = Vue.extend(SketchReferenceWidget)
-	new Widget({
-		propsData: {
+
+	const app = createApp(
+		SketchReferenceWidget,
+		{
 			richObjectType,
 			richObject,
 			accessible,
 		},
-	}).$mount(el)
-})
+	)
+	app.mixin({ methods: { t, n } })
+	app.mount(el)
+}, () => {}, { hasInteractiveView: false })

@@ -1,3 +1,7 @@
+<!--
+  - SPDX-FileCopyrightText: 2025 Nextcloud GmbH and Nextcloud contributors
+  - SPDX-License-Identifier: AGPL-3.0-or-later
+-->
 <template>
 	<div class="sketch-picker-content">
 		<h2>
@@ -26,7 +30,7 @@
 		<ImageEditor v-show="!pickingRecent"
 			:src="initialImageUrl"
 			@submit="onEditorSubmit"
-			@cancel="$emit('cancel')" />
+			@cancel="onCancel" />
 	</div>
 </template>
 
@@ -34,7 +38,7 @@
 import FolderOutlineIcon from 'vue-material-design-icons/FolderOutline.vue'
 import HistoryIcon from 'vue-material-design-icons/History.vue'
 
-import NcButton from '@nextcloud/vue/dist/Components/NcButton.js'
+import NcButton from '@nextcloud/vue/components/NcButton'
 
 import axios from '@nextcloud/axios'
 import { generateOcsUrl, generateUrl, imagePath } from '@nextcloud/router'
@@ -81,9 +85,6 @@ export default {
 
 	mounted() {
 		this.getRecentlySeenSketches()
-	},
-
-	beforeDestroy() {
 	},
 
 	methods: {
@@ -167,6 +168,11 @@ export default {
 			const internalLink = window.location.protocol + '//' + window.location.host
 				+ generateUrl('/apps/sketch_picker/sketches/{fileName}', { fileName })
 			this.$emit('submit', internalLink)
+			this.$el.dispatchEvent(new CustomEvent('submit', { detail: internalLink, bubbles: true }))
+		},
+		onCancel() {
+			this.$emit('cancel')
+			this.$el.dispatchEvent(new CustomEvent('cancel', { bubbles: true }))
 		},
 	},
 }

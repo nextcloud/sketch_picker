@@ -1,0 +1,22 @@
+{ "translations": {
+    "Undo" : "Desfazer",
+    "Invalid image." : "Imagem inválida.",
+    "Custom" : "Personalizado",
+    "Classic TV" : "TV clássica",
+    "Flip X" : "Espelhar no eixo X",
+    "Flip Y" : "Espelhar no eixo Y",
+    "HSV" : "HSV",
+    "Importing …" : "Importando …",
+    "Polygon" : "Polígono",
+    "Width in pixels" : "Largura em pixels",
+    "Reset to original image size" : "Voltar ao tamanho original",
+    "Text alignment" : "Alinhamento de texto",
+    "Font family" : "Família tipográfica",
+    "Upload watermark" : "Fazer upload da marca d'água",
+    "Horizontal" : "Horizontal",
+    "Save image as" : "Salvar imagem como",
+    "Quality" : "Qualidade",
+    "Saved image size (width x height)" : "Tamanho da imagem salva (largura x altura)",
+    "Fit size" : " Ajustar tamanho"
+},"pluralForm" :"nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;"
+}

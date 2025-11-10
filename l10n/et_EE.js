@@ -1,0 +1,14 @@
+OC.L10N.register(
+    "sketch_picker",
+    {
+    "Undo" : "Tühista",
+    "HSV" : "HSV",
+    "Importing …" : "Impordin ...",
+    "Polygon" : "Hulknurk",
+    "Reset to original image size" : "Lähesta algseks pildi suuruseks",
+    "Font family" : "Fondi perekond",
+    "Save image as" : "Salvesta pilt kui",
+    "Quality" : "Kvaliteet",
+    "Fit size" : "Mahuta suurus"
+},
+"nplurals=2; plural=(n != 1);");

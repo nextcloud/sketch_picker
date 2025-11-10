@@ -1,0 +1,15 @@
+{ "translations": {
+    "Undo" : "Visszavonás",
+    "Invalid image." : "Érvénytelen kép.",
+    "Flip X" : "X-tengelyre tükrözés",
+    "HSV" : "HSV",
+    "Importing …" : "Importálás…",
+    "Polygon" : "Sokszög",
+    "Reset to original image size" : "Visszaállítás az eredeti képméretre",
+    "Text alignment" : "Szöveg igazítása",
+    "Font family" : "Betűkészletcsalád",
+    "Save image as" : "Kép mentése másként",
+    "Quality" : "Minőség",
+    "Fit size" : "Illeszkedő méret"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

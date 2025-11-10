@@ -1,0 +1,27 @@
+OC.L10N.register(
+    "sketch_picker",
+    {
+    "Continue" : "Pokračovať",
+    "Undo" : "Odvolať",
+    "Resize" : "Zmeniť veľkosť",
+    "Invalid image." : "Chybný obrázok.",
+    "Custom" : "Vlastný",
+    "Classic TV" : "Klasická TV",
+    "CinemaScope" : "Širokoúhlo",
+    "Flip X" : "Prevrátiť zvislo",
+    "Flip Y" : "Prevrátiť vodorovne",
+    "HSV" : "HSV",
+    "Importing …" : "Importuje sa ...",
+    "Polygon" : "Mnohouholník",
+    "Width in pixels" : "Šírka v pixeloch",
+    "Reset to original image size" : "Vrátiť pôvodnú veľkost obrázku",
+    "Text alignment" : "Zarovnanie textu",
+    "Font family" : "Typ písma",
+    "Upload watermark" : "Nahrať vodoznak",
+    "Horizontal" : "Horizontálne",
+    "Save image as" : "Uložiť obrázok ako",
+    "Quality" : "Kvalita",
+    "Saved image size (width x height)" : "Veľkosť uloženého obrázka (šírka x výška)",
+    "Fit size" : "Prispôsobiť veľlkosť"
+},
+"nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n >= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);");

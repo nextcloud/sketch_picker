@@ -1,0 +1,28 @@
+{ "translations": {
+    "Continue" : "داۋاملاشتۇر",
+    "Undo" : "ئەمەلدىن قالدۇرۇش",
+    "Draw" : "سىزىش",
+    "Resize" : "رازمېرى",
+    "Invalid image." : "ئىناۋەتسىز رەسىم.",
+    "Custom" : "Custom",
+    "Classic TV" : "كىلاسسىك تېلېۋىزور",
+    "CinemaScope" : "CinemaScope",
+    "Flip X" : "Flip X.",
+    "Flip Y" : "Flip Y.",
+    "HSV" : "HSV",
+    "Importing …" : "Importing…",
+    "Polygon" : "كۆپ گۈللۈك",
+    "Corner Radius" : "Corner Radius",
+    "Width in pixels" : "پىكسېلنىڭ كەڭلىكى",
+    "Reset to original image size" : "ئەسلى رەسىم چوڭلۇقىغا قايتۇرۇڭ",
+    "Rotate" : "ئايلاندۇرۇش",
+    "Text alignment" : "تېكىستنى توغرىلاش",
+    "Font family" : "خەت نۇسخىسى ئائىلىسى",
+    "Upload watermark" : "سۇ بەلگىسىنى يۈكلەڭ",
+    "Horizontal" : "توغرىسىغا",
+    "Save image as" : "رەسىمنى ساقلاڭ",
+    "Quality" : "سۈپەت",
+    "Saved image size (width x height)" : "ساقلانغان رەسىم چوڭلۇقى (كەڭلىكى x ئېگىزلىكى)",
+    "Fit size" : "ماس كېلىدىغان چوڭلۇقى"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

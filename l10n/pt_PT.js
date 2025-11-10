@@ -1,0 +1,25 @@
+OC.L10N.register(
+    "sketch_picker",
+    {
+    "Undo" : "Desfazer",
+    "Invalid image." : "Imagem inválida.",
+    "Custom" : "Personalizado",
+    "Classic TV" : "TV clássica",
+    "CinemaScope" : "CinemaScope",
+    "Flip X" : "Inverter X",
+    "Flip Y" : "Inverter Y",
+    "HSV" : "HSV",
+    "Importing …" : "A importar…",
+    "Polygon" : "Polígono",
+    "Width in pixels" : "Largura em píxeis",
+    "Reset to original image size" : "Repor tamanho original da imagem",
+    "Text alignment" : "Alinhamento do texto",
+    "Font family" : "Tipo de letra",
+    "Upload watermark" : "Carregar marca de água",
+    "Horizontal" : "Horizontal",
+    "Save image as" : "Guardar imagem como",
+    "Quality" : "Qualidade",
+    "Saved image size (width x height)" : "Tamanho da imagem guardada (largura x altura)",
+    "Fit size" : "Ajustar tamanho"
+},
+"nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");

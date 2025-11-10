@@ -1,0 +1,27 @@
+OC.L10N.register(
+    "sketch_picker",
+    {
+    "Continue" : "Настави",
+    "Undo" : "Опозови",
+    "Resize" : "Промена величине",
+    "Invalid image." : "Неисправна слика.",
+    "Custom" : "Прилагођено",
+    "Classic TV" : "Класични ТВ",
+    "CinemaScope" : "Синемаскоп",
+    "Flip X" : "Обрни око X",
+    "Flip Y" : "Обрни око Y",
+    "HSV" : "HSV",
+    "Importing …" : "Увоз ...",
+    "Polygon" : "Полигон",
+    "Width in pixels" : "Ширина у пикселима",
+    "Reset to original image size" : "Ресетуј на оригиналну величину слике",
+    "Text alignment" : "Поравнање текста",
+    "Font family" : "Фамилија фонта",
+    "Upload watermark" : "Отпреми водени жи",
+    "Horizontal" : "Хоризонтална",
+    "Save image as" : "Сачувај слику као",
+    "Quality" : "Квалитет",
+    "Saved image size (width x height)" : "Величина сачуване слике (ширина x висина)",
+    "Fit size" : "Уклопи величину"
+},
+"nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);");

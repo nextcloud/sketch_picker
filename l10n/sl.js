@@ -1,0 +1,27 @@
+OC.L10N.register(
+    "sketch_picker",
+    {
+    "Continue" : "Nadaljuj",
+    "Undo" : "Razveljavi",
+    "Resize" : "Spremeni velikost",
+    "Invalid image." : "Neveljavna slika",
+    "Custom" : "Po meri",
+    "Classic TV" : "Klasična TV",
+    "CinemaScope" : "CinemaScope",
+    "Flip X" : "Zrcali po osi X",
+    "Flip Y" : "Zrcali po osi Y",
+    "HSV" : "HSV",
+    "Importing …" : "Poteka uvažanje ...",
+    "Polygon" : "Mnogokotnik",
+    "Width in pixels" : "Širina v točkah",
+    "Reset to original image size" : "Ponastavi na izvorno velikost slike",
+    "Text alignment" : "Poravnava besedila",
+    "Font family" : "Družina pisave",
+    "Upload watermark" : "Pošlji vodni žig",
+    "Horizontal" : "Vodoravno",
+    "Save image as" : "Shrani sliko kot",
+    "Quality" : "Kakovost",
+    "Saved image size (width x height)" : "Velikost shranjene slike (širina x višina)",
+    "Fit size" : "Prilagodi velikosti"
+},
+"nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);");

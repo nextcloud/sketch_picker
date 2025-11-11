@@ -1,0 +1,15 @@
+{ "translations": {
+    "Cancel" : "Cancel",
+    "Name" : "Nombre",
+    "Back" : "Volver",
+    "Reset" : "Restablecer",
+    "Continue" : "Continuar",
+    "Undo" : "Deshacer",
+    "Custom" : "Personalizado",
+    "Value" : "Valor",
+    "Line" : "Linea",
+    "Text" : "Texto",
+    "Size" : "Tamaño",
+    "Position" : "Posición"
+},"pluralForm" :"nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;"
+}

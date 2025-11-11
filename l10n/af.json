@@ -1,0 +1,10 @@
+{ "translations": {
+    "Unsaved changes" : "Onbewaarde veranderinge",
+    "Cancel" : "Cancel",
+    "Reset" : "Herstel",
+    "Continue" : "Gaan voort",
+    "Custom" : "Eie",
+    "Text" : "Teks",
+    "Position" : "Posisie"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

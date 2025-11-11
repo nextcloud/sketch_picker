@@ -1,0 +1,11 @@
+{ "translations": {
+    "Cancel" : "Cancel",
+    "Name" : "Нэр",
+    "Back" : "Буцах",
+    "Reset" : "тохируулах",
+    "Continue" : "үргэлжлүүлэх",
+    "Undo" : "буцах",
+    "Custom" : "Дурын",
+    "Position" : "Байр"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

@@ -1,6 +1,17 @@
 { "translations": {
+    "Unsaved changes" : "Ndryshime të paruajtura",
+    "Cancel" : "Cancel",
+    "Name" : "Emër",
+    "Back" : "Mbrapsht",
+    "Reset" : "Rivendos",
     "Continue" : "Vazhdo",
     "Undo" : "Ktheje pas",
-    "Custom" : "E përshtatur"
+    "Redo" : "Ribëj",
+    "Custom" : "E përshtatur",
+    "Value" : "Vlerë ",
+    "Text" : "Tekst",
+    "Size" : "Madhësi",
+    "Position" : "Pozicion",
+    "Name is required." : "Emri është i domosdoshëm"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

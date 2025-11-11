@@ -1,4 +1,12 @@
 { "translations": {
-    "Undo" : "დაბრუნება"
+    "Unsaved changes" : "შეუნახავი ცვლილებები",
+    "Cancel" : "Cancel",
+    "Name" : "სახელი",
+    "Reset" : "საწყის მდოგმარეობაში დაბრუნება",
+    "Undo" : "დაბრუნება",
+    "Custom" : "ინდივიდუალური",
+    "Text" : "ტექსტი",
+    "Size" : "ზომა",
+    "Position" : "პოზიცია"
 },"pluralForm" :"nplurals=2; plural=(n!=1);"
 }

@@ -1,0 +1,16 @@
+{ "translations": {
+    "Unsaved changes" : "Nekonservitaj ŝanĝoj",
+    "Cancel" : "Cancel",
+    "Name" : "Nomo",
+    "Loading …" : "Ŝargado...",
+    "Reset" : "Restarigi",
+    "Continue" : "Daŭrigi",
+    "Undo" : "Malfari",
+    "Redo" : "Refari",
+    "Custom" : "Propra",
+    "Text" : "Teksto",
+    "Size" : "Grando",
+    "Position" : "Loko",
+    "Extension" : "Dosiersufikso"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

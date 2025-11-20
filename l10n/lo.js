@@ -3,12 +3,25 @@ OC.L10N.register(
     {
     "Cancel" : "Cancel",
     "Name" : "ຊື່",
+    "Save as" : "Save as",
     "Back" : "ກັບຄືນ",
     "Loading …" : "ກຳລັງໂຫຼດ…",
     "Reset" : "ຕັ້ງຄ່າໃໝ່",
     "Continue" : "ສືບຕໍ່",
+    "Undo" : "Undo",
+    "Redo" : "ເຮັດຄືນ",
+    "Filters" : "Filters",
+    "Custom" : "Custom",
+    "Blur" : "Blur",
+    "Value" : "Value",
     "Image" : "ຮູບພາບ",
+    "Line" : "ເສັ້ນ",
     "Text" : "ຂໍ້ຄວາມ",
-    "Size" : "ຂະຫນາດ"
+    "Size" : "ຂະຫນາດ",
+    "Horizontal" : "Horizontal",
+    "Vertical" : "Vertical",
+    "Position" : "Position",
+    "Extension" : "Extension",
+    "Name is required." : "ຕ້ອງໃສ່ຊື່."
 },
 "nplurals=1; plural=0;");

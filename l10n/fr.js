@@ -2,6 +2,7 @@ OC.L10N.register(
     "sketch_picker",
     {
     "Error saving image" : "Erreur lors de l'enregistrement de l'image",
+    "Really?" : "Vraiment ?",
     "Unsaved changes" : "Modifications non enregistrées",
     "Drop changes" : "Abandonner les modifications",
     "Cancel" : "Annuler",
@@ -32,6 +33,7 @@ OC.L10N.register(
     "is not an image" : "n'est pas une image",
     "to be uploaded" : "à téléverser",
     "Crop" : "Recadrer",
+    "Original" : "Original",
     "Custom" : "Personnalisé",
     "Square" : "Carré",
     "Landscape" : "Paysage",

@@ -1,5 +1,6 @@
 { "translations": {
     "Error saving image" : "Erreur lors de l'enregistrement de l'image",
+    "Really?" : "Vraiment ?",
     "Unsaved changes" : "Modifications non enregistrées",
     "Drop changes" : "Abandonner les modifications",
     "Cancel" : "Annuler",
@@ -30,6 +31,7 @@
     "is not an image" : "n'est pas une image",
     "to be uploaded" : "à téléverser",
     "Crop" : "Recadrer",
+    "Original" : "Original",
     "Custom" : "Personnalisé",
     "Square" : "Carré",
     "Landscape" : "Paysage",

@@ -7,6 +7,7 @@ OC.L10N.register(
     "Cancel" : "Cancel",
     "Name" : "Nombre",
     "Save as" : "Guardar como",
+    "Back" : "Regresar",
     "Loading …" : "Cargando...",
     "Reset" : "Restablecer",
     "All changes will be lost." : "Se perderán todos los cambios.",

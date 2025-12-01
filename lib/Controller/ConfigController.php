@@ -44,16 +44,4 @@ class ConfigController extends Controller {
 		}
 		return new DataResponse('');
 	}
-
-	/**
-	 * @param array $values
-	 * @return DataResponse
-	 */
-	public function setAdminConfig(array $values): DataResponse {
-		foreach ($values as $key => $value) {
-			$this->config->setAppValue(Application::APP_ID, $key, $value);
-		}
-
-		return new DataResponse('');
-	}
 }

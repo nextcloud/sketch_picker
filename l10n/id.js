@@ -7,6 +7,7 @@ OC.L10N.register(
     "Cancel" : "Cancel",
     "Name" : "Nama",
     "Save as" : "Simpan sebagai",
+    "Back" : "Kembali",
     "Loading …" : "Memuat …",
     "Reset" : "Setel ulang",
     "All changes will be lost." : "Semua perubahan akan hilang.",

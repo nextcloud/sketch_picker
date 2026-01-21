@@ -7,6 +7,7 @@ OC.L10N.register(
     "Continue" : "ดำเนินการต่อ",
     "Undo" : "เลิกทำ",
     "Custom" : "กำหนดเอง",
+    "Blur" : "เบลอ",
     "Text" : "ข้อความ",
     "Size" : "ขนาด",
     "Position" : "ตำแหน่ง"

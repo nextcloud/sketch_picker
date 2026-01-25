@@ -13,6 +13,8 @@ OC.L10N.register(
     "All changes will be lost." : "Tutte le modifiche verranno perse.",
     "Are you sure you want to continue?" : "Sei sicuro di voler continuare?",
     "Continue" : "Continua",
+    "Undo" : "Annulla",
+    "Redo" : "Rifai",
     "Show original image" : "Mostra immagine originale",
     "Zoom in" : "Ingrandisci",
     "Zoom out" : "Rimpicciolisci",

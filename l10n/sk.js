@@ -68,6 +68,7 @@ OC.L10N.register(
     "Text spacing" : "Riadkovanie",
     "Text alignment" : "Zarovnanie textu",
     "Font family" : "Typ písma",
+    "Size" : "Veľkosť",
     "Letter spacing" : "Medzery medzi písmenami",
     "Line height" : "Hrúbka čiary",
     "Warmth" : "Teplota",

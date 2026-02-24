@@ -4,6 +4,7 @@ OC.L10N.register(
     "Draw a sketch" : "Зураг зур",
     "Sketch picker" : "Зургийн сонгогч",
     "Quickly draw and share sketches" : "Зургийг хурдан зураад хуваалцана",
+    "This app adds a smart picker provider to quickly draw sketches and insert them in your current context." : "Энэ апп нь зураг хурдан зурж одоогийн нөхцөл рүүгээ оруулах боломжтой ухаалаг сонголтын үйлчилгээ нэмдэг.",
     "Error saving image" : "Зураг хадгалахад алдаа",
     "Really?" : "Үнэхээр үү?",
     "Unsaved changes" : "Хадгалаагүй өөрчлөлтүүд",
@@ -100,6 +101,7 @@ OC.L10N.register(
     "Name is required." : "Нэр шаардлагатай.",
     "Quality" : "Чанар",
     "Saved image size (width x height)" : "Хадгалсан зургийн хэмжээ (өргөн x өндөр)",
+    "Note that the selected crop area is lower than the applied resize which might cause quality decrease" : "Сонгосон тайрах хэсэг нь хэрэглэгдсэн хэмжээ өөрчлөлтөөс бага байгаа тул чанар буурах магадлалтайг анхаарна уу.",
     "Actual size (100%)" : "Жинхэнэ хэмжээ (100%)",
     "Fit size" : "Тохирох хэмжээ"
 },

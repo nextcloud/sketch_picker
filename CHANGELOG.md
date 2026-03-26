@@ -6,6 +6,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## 2.4.0 – 2026-03-26
+
+### Changed
+
+- Migrate to Vue 3, update `@nextcloud/vue` to v9, and add eslint and node CI workflows @julien-nc [#18](https://github.com/nextcloud/sketch_picker/pull/18)
+- Support Nextcloud 34, update npm packages, switch Psalm to `vimeo/psalm` with vendor-bin, and set Composer platform PHP to 8.2 @julien-nc [#45](https://github.com/nextcloud/sketch_picker/pull/45)
+- Update composer and npm dependencies
+- Update npm packages
+- Add Dependabot configuration
+- Remove the unused `setAdminConfig` route
+
 ## 2.3.0 – 2025-11-03
 
 ### Added

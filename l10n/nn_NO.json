@@ -1,0 +1,9 @@
+{ "translations": {
+    "Cancel" : "Cancel",
+    "Name" : "Namn",
+    "Continue" : "Gå vidare",
+    "Filters" : "Filter",
+    "Value" : "Verdi",
+    "Size" : "Storleik"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

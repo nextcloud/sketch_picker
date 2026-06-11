@@ -6,6 +6,7 @@ OC.L10N.register(
     "Back" : "Tuɣalin",
     "Loading …" : "Asali ...",
     "Continue" : "Kemmel",
+    "Filters" : "Imsizdigen",
     "Image" : "Tugna",
     "Text" : "Aḍris",
     "Size" : "Tiddi"

@@ -8,6 +8,7 @@ OC.L10N.register(
     "Save as" : "Guardar como",
     "Back" : "Voltar",
     "Reset" : "Reiniciar",
+    "Are you sure you want to continue?" : "Tem certeza que deseja continuar?",
     "Continue" : "Continuar",
     "Undo" : "Desfazer",
     "Redo" : "Repetir",

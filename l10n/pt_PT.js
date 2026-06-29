@@ -1,12 +1,15 @@
 OC.L10N.register(
     "sketch_picker",
     {
+    "Quickly draw and share sketches" : "Desenhe e compartilhe esboços rapidamente",
     "Unsaved changes" : "Modificações não guardadas",
     "Drop changes" : "Cancelar alterações",
     "Cancel" : "Cancel",
+    "Choose a file to draw a sketch on" : "Escolha um arquivo para desenhar um esboço",
     "Name" : "Nome",
     "Save as" : "Guardar como",
     "Back" : "Voltar",
+    "Loading …" : "Carregando …",
     "Reset" : "Reiniciar",
     "Are you sure you want to continue?" : "Tem certeza que deseja continuar?",
     "Continue" : "Continuar",

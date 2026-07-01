@@ -1,6 +1,7 @@
 OC.L10N.register(
     "sketch_picker",
     {
+    "Draw a sketch" : "Faça um esboço",
     "Quickly draw and share sketches" : "Desenhe e compartilhe esboços rapidamente",
     "This app adds a smart picker provider to quickly draw sketches and insert them in your current context." : "Este aplicativo adiciona um seletor inteligente para desenhar esboços rapidamente e inseri-los no seu contexto atual.",
     "Unsaved changes" : "Modificações não guardadas",
@@ -8,8 +9,10 @@ OC.L10N.register(
     "Cancel" : "Cancel",
     "Loading sketch" : "Carregando esboço",
     "Choose a file to draw a sketch on" : "Escolha um arquivo para desenhar um esboço",
+    "Failed to save image" : "Falha ao salvar imagem",
     "Open from Files" : "Abrir a partir de \"Arquivos\"",
     "Name" : "Nome",
+    "Post sketch" : "Postar esboço",
     "Save as" : "Guardar como",
     "Back" : "Voltar",
     "Loading …" : "Carregando …",

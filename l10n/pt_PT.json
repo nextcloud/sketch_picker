@@ -1,8 +1,10 @@
 { "translations": {
     "Draw a sketch" : "Faça um esboço",
+    "Sketch picker" : "Seletor de esboços",
     "Quickly draw and share sketches" : "Desenhe e compartilhe esboços rapidamente",
     "This app adds a smart picker provider to quickly draw sketches and insert them in your current context." : "Este aplicativo adiciona um seletor inteligente para desenhar esboços rapidamente e inseri-los no seu contexto atual.",
     "Error saving image" : "Erro ao salvar imagem",
+    "Really?" : "Tem certeza?",
     "Unsaved changes" : "Modificações não guardadas",
     "Drop changes" : "Cancelar alterações",
     "Cancel" : "Cancel",

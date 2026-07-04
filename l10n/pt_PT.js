@@ -15,6 +15,7 @@ OC.L10N.register(
     "Failed to save image" : "Falha ao salvar imagem",
     "Unknown Sketch Picker API error" : "Erro desconhecido na API do Seletor de Esboços",
     "Open from Files" : "Abrir a partir de \"Arquivos\"",
+    "Open recently seen sketch" : "Abrir esboço recém-visto",
     "Name" : "Nome",
     "Post sketch" : "Postar esboço",
     "Save as" : "Guardar como",

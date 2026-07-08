@@ -68,6 +68,7 @@ OC.L10N.register(
     "Text spacing" : "Textavstånd",
     "Text alignment" : "Textjustering",
     "Font family" : "Typsnittsfamilj",
+    "Size" : "Storlek",
     "Letter spacing" : "Teckenavstånd",
     "Line height" : "Radavstånd",
     "Warmth" : "Värme",

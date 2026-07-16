@@ -13,7 +13,6 @@ namespace OCA\SketchPicker\AppInfo;
 use OCA\SketchPicker\Listener\SketchPickerReferenceListener;
 use OCA\SketchPicker\Reference\SketchPickerReferenceProvider;
 use OCP\AppFramework\App;
-
 use OCP\AppFramework\Bootstrap\IBootContext;
 use OCP\AppFramework\Bootstrap\IBootstrap;
 use OCP\AppFramework\Bootstrap\IRegistrationContext;

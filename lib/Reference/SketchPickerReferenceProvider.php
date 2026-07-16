@@ -29,7 +29,6 @@ use OCP\Collaboration\Reference\IReference;
 use OCP\Collaboration\Reference\IReferenceManager;
 use OCP\Collaboration\Reference\Reference;
 use OCP\IL10N;
-
 use OCP\IURLGenerator;
 
 class SketchPickerReferenceProvider extends ADiscoverableReferenceProvider {

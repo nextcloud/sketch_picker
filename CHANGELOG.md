@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## 2.5.0 – 2026-07-21
+
+### Changed
+
+- Support Nextcloud 35 @julien-nc
+- Update dependencies, run code style fix and change PHP version in phpunit action @julien-nc [#69](https://github.com/nextcloud/sketch_picker/pull/69)
+
 ## 2.4.0 – 2026-03-26
 
 ### Changed

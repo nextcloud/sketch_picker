@@ -3,9 +3,12 @@ OC.L10N.register(
     {
     "Cancel" : "Cancel",
     "Name" : "Namn",
+    "Back" : "Tilbake",
     "Continue" : "Gå vidare",
     "Filters" : "Filter",
+    "Custom" : "Sjølvvald",
     "Value" : "Verdi",
+    "Image" : "Bilete",
     "Size" : "Storleik"
 },
 "nplurals=2; plural=(n != 1);");

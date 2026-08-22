@@ -9,6 +9,7 @@ OC.L10N.register(
     "Custom" : "Sjølvvald",
     "Value" : "Verdi",
     "Image" : "Bilete",
+    "Text" : "Tekst",
     "Size" : "Storleik"
 },
 "nplurals=2; plural=(n != 1);");

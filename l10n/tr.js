@@ -24,7 +24,7 @@ OC.L10N.register(
     "Reset" : "Sıfırla",
     "All changes will be lost." : "Tüm değişiklikler kaybolacak.",
     "Are you sure you want to continue?" : "İlerlemek istediğinize emin misiniz?",
-    "Continue" : "Sürdür",
+    "Continue" : "İlerle",
     "Undo" : "Geri al",
     "Redo" : "Yinele",
     "Show original image" : "Özgün görseli görüntüle",

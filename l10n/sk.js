@@ -83,7 +83,7 @@ OC.L10N.register(
     "Font family" : "Typ písma",
     "Size" : "Veľkosť",
     "Letter spacing" : "Medzery medzi písmenami",
-    "Line height" : "Hrúbka čiary",
+    "Line height" : "Výška riadka",
     "Warmth" : "Teplota",
     "+ Add watermark" : "+ Pridať vodoznak",
     "Choose watermark type" : "Vyberte typ vodoznaku",

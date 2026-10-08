@@ -95,7 +95,7 @@ OC.L10N.register(
     "Vertical" : "Vertikálne",
     "Opacity" : "Priehľadnosť",
     "Position" : "Pozícia",
-    "Stroke" : "Potiahnuť",
+    "Stroke" : "Ťah",
     "Save image as" : "Uložiť obrázok ako",
     "Extension" : "Prípona",
     "Name is required." : "Meno je povinné.",

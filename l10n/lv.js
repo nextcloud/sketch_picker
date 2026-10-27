@@ -20,6 +20,7 @@ OC.L10N.register(
     "Portrait" : "Portrets",
     "Value" : "Vērtība",
     "Image" : "Attēli",
+    "Line" : "Līnija",
     "Text" : "Teksts",
     "Size" : "Izmērs",
     "Save image as" : "Saglabāt attēlu kā",

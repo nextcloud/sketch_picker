@@ -11,6 +11,7 @@ OC.L10N.register(
     "Redo" : "Ribëj",
     "Custom" : "E përshtatur",
     "Value" : "Vlerë ",
+    "Line" : "Vijë",
     "Text" : "Tekst",
     "Size" : "Madhësi",
     "Position" : "Pozicion",

@@ -13,6 +13,7 @@ OC.L10N.register(
     "All changes will be lost." : "Wszystkie zmiany zostaną utracone.",
     "Are you sure you want to continue?" : "Jesteś pewien, że chcesz kontynuować?",
     "Continue" : "Kontynuuj",
+    "Undo" : "Cofnij",
     "Redo" : "Powtórzenie",
     "Show original image" : "Pokaż oryginalny obraz",
     "Zoom in" : "Powiększ",
